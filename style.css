@@ -1,0 +1,171 @@
+:root {
+  --clr-primary-bg: hsl(257, 40%, 49%);
+  --clr-primary-magenta: hsl(300, 69%, 71%);
+
+  --fnt-heading: "Poppins";
+  --fnt-body: "Open Sans";
+}
+
+html {
+  font-family: var(--fnt-body), Courier, monospace;
+  background-color: var(--clr-primary-bg);
+}
+
+body {
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  margin: 0;
+  color: white;
+}
+
+header .logo,
+header .mockup,
+main section,
+footer .social-media {
+  margin: 30px 30px;
+}
+
+header .logo {
+  width: 30%;
+}
+
+header .mockup {
+  width: 85%;
+}
+
+main section {
+  text-align: center;
+}
+
+main section h1 {
+  font-family: var(--fnt-heading);
+  font-size: 1.6rem;
+}
+
+main section p {
+  font-family: var(--fnt-body);
+  font-size: 1rem;
+}
+
+main section button {
+  width: 70%;
+  padding: 1em;
+  font-size: 0.8rem;
+  border-radius: 2em;
+  border: 0;
+  color: var(--clr-primary-bg);
+}
+
+main section button:hover {
+  background-color: var(--clr-primary-magenta);
+  color: white;
+  cursor: pointer;
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.social-media .fa-brands {
+  color: white;
+  border: 1px solid;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0 5px;
+  padding-top: 8px;
+  width: 20px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.social-media .fa-brands:hover {
+  background-color: transparent;
+  color: var(--clr-primary-magenta);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(113, 84%, 40%);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 1000px) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 90% 100%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header main"
+      "header main";
+    justify-items: center;
+    align-items: center;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  header .logo,
+  header .mockup,
+  main .container,
+  footer .social-media {
+    margin: 50px 60px 0;
+  }
+
+  header .logo {
+    width: 30%;
+  }
+
+  header .mockup {
+    width: 89%;
+    margin-top: 3.5em;
+  }
+
+  main section {
+    text-align: start;
+    margin-left: 3em;
+    max-width: 80%;
+  }
+
+  main section h1 {
+    font-family: var(--fnt-heading);
+    max-width: 60%;
+    font-size: 2rem;
+  }
+
+  main section p {
+    font-family: var(--fnt-body);
+    max-width: 95%;
+    font-size: 1rem;
+  }
+
+  main section button {
+    width: 25%;
+    padding: 0.7em;
+    border-radius: 2em;
+    font-size: 1.2rem;
+  }
+
+  .social-media {
+    margin-top: 2em;
+    margin-right: 3em;
+    float: right;
+  }
+
+  .attribution {
+    margin-top: 7.6em;
+  }
+}
